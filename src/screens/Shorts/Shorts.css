@@ -3,7 +3,7 @@ main{
 }
 
 .swiper-wrapper {
-    width: 400px;
+    width: 450px;
     max-width: 100vw;
     height: 680px;
     max-height: calc(100vh - 45px) ;

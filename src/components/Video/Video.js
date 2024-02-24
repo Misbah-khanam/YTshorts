@@ -56,10 +56,10 @@ const Video = (props) => {
         </div>
         <div className='video-options-mobile'>
           <div className='circle-dark' onClick={toggleLike}>
-            <FontAwesomeIcon icon="fa-solid fa-thumbs-up" className='like' onClick={toggleLike} style={{color: like ? "red" : ""}} />
+            <FontAwesomeIcon icon="fa-solid fa-thumbs-up" className='like' onClick={toggleLike} style={{color: like ? "#0099ff" : ""}} />
           </div>
           <div className='circle-dark' onClick={toggleDislike}>
-            <FontAwesomeIcon icon="fa-solid fa-thumbs-down" className='like' onClick={toggleDislike} style={{color: dislike ? "red" : ""}} />
+            <FontAwesomeIcon icon="fa-solid fa-thumbs-down" className='like' onClick={toggleDislike} style={{color: dislike ? "#0099ff" : ""}} />
           </div>
           <div className='circle-dark'>
             <FontAwesomeIcon icon="fa-solid fa-comment-alt" className='like' />
@@ -70,10 +70,10 @@ const Video = (props) => {
         </div>
         <div className='video-options'>
           <div className='circle' onClick={toggleLike}>
-            <FontAwesomeIcon icon="fa-solid fa-thumbs-up" className='like' onClick={toggleLike} style={{color: like ? "red" : ""}} />
+            <FontAwesomeIcon icon="fa-solid fa-thumbs-up" className='like' onClick={toggleLike} style={{color: like ? "#0099ff" : ""}} />
           </div>
           <div className='circle' onClick={toggleDislike}>
-            <FontAwesomeIcon icon="fa-solid fa-thumbs-down" className='like' onClick={toggleDislike} style={{color: dislike ? "red" : ""}} />
+            <FontAwesomeIcon icon="fa-solid fa-thumbs-down" className='like' onClick={toggleDislike} style={{color: dislike ? "#0099ff" : ""}} />
           </div>
           <div className='circle'>
             <FontAwesomeIcon icon="fa-solid fa-comment-alt" className='like' />
