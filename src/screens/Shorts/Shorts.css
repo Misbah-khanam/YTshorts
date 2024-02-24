@@ -12,6 +12,6 @@ main{
 
 @media screen and (max-width: 400px) {
     main{
-        margin-top: 20px;
+        margin-top: 5px;
     }
 }
