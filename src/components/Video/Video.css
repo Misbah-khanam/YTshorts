@@ -1,0 +1,141 @@
+.video-container{
+    height: 600px;
+    max-height: calc(100vh - 100px);
+    width: 320px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.video{
+    width: 100%;
+    /* height: 600px; */
+    /* max-height: calc(100vh - 100px); */
+    border-radius: 10px;
+}
+
+.video-title{
+    position: relative;
+    bottom: 200px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: start;
+    padding: 15px;
+    line-height: 20px !important;
+}
+
+.video-comp{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.video-options{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    bottom: 60px;
+}
+
+.video-options-mobile{
+    display: none;
+}
+
+.like{
+    font-size: 20px;
+}
+
+.circle{
+    background-color: rgb(219, 216, 216);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    margin-top: 20px;
+}
+
+.circle-dark{
+    /* background-color: rgb(114, 114, 114,0.5); */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    margin-top: 10px;
+}
+
+.square{
+    height: 45px;
+    width: 45px;
+    line-height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.user-icon{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.user-icon-small{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.user-section{
+    display: flex;
+    position: relative;
+    bottom: 170px;
+    line-height: 50px;
+}
+
+.user-section p{
+    margin: 0px;
+    margin-top: -10px;
+    color: white;
+    margin-left: 5px;
+}
+
+.subscribe{
+    margin-top: 0px !important;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    background-color: white;
+    color: black !important;
+    line-height: 20px;
+    height: 24px;
+    font-size: 600;
+    margin-left: 20px !important;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    .video-options{
+        display: none;
+    }
+    .video-container{
+        width: 100vw;
+    }
+    .video{
+        width: 100vw;
+        object-fit: cover;
+        border-radius: 0px;
+        height: calc(100vh - 50px);
+    }
+    .video-options-mobile{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        position: relative;
+        bottom: 90px;
+        right: 70px;
+        color: white !important;
+    }
+}

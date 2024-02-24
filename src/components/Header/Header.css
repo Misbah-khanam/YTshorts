@@ -1,0 +1,21 @@
+.yt-icon{
+    width: 35px;
+    float: left;
+}
+
+.header-section{
+    /* margin-top: 20px; */
+    padding-left: 40px;
+    display: flex;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.youtube-text{
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+  }

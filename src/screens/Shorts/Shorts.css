@@ -1,0 +1,17 @@
+main{
+    margin-top: 60px;
+}
+
+.swiper-wrapper {
+    width: 400px;
+    max-width: 100vw;
+    height: 680px;
+    max-height: calc(100vh - 45px) ;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    main{
+        margin-top: 40px;
+    }
+}
