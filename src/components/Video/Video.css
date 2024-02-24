@@ -126,7 +126,7 @@
         width: 100vw;
         object-fit: cover;
         border-radius: 0px;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 100px);
     }
     .video-options-mobile{
         margin-left: 20px;
