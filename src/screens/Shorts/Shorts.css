@@ -12,7 +12,7 @@ main{
 
 @media screen and (max-width: 450px) {
     main{
-        margin-top: 15px;
+        margin-top: 0px;
     }
     .swiper-wrapper{
         height: fit-content;
