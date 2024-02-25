@@ -1,5 +1,5 @@
 .video-container{
-    height: 600px;
+    height: 100%;
     max-height: calc(100vh - 100px);
     width: 320px;
     border-radius: 10px;
@@ -121,20 +121,21 @@
     }
     .video-container{
         width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
     }
     .video{
         width: 100vw;
         object-fit: cover;
         border-radius: 0px;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 30px);
     }
     .video-options-mobile{
-        margin-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: end;
         position: relative;
-        bottom: 90px;
+        bottom: 210px;
         right: 70px;
         color: white !important;
     }
