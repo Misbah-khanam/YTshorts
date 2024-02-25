@@ -11,9 +11,10 @@ import video3 from '../../assets/3.mp4';
 const Shorts = () => {
     const swiperRef = useRef(null);
     const videoRefs = useRef([]);
-    
+    const [hasInteracted, setHasInteracted] = useState(false);
 
     useEffect(() => {
+        const initializeSwiper = () => {
             if (swiperRef.current) {
                 const swiper = new Swiper(swiperRef.current, {
                     direction: 'vertical',
@@ -29,17 +30,39 @@ const Shorts = () => {
                                 videoRefs.current[previousSlideIndex].pause();
                             }
 
-                            const currentSlideIndex = this.activeIndex;
-                            if (videoRefs.current[currentSlideIndex]) {
-                                videoRefs.current[currentSlideIndex].play();
+                            // Start video playback in the current slide if user has interacted
+                            if (hasInteracted) {
+                                const currentSlideIndex = this.activeIndex;
+                                if (videoRefs.current[currentSlideIndex]) {
+                                    videoRefs.current[currentSlideIndex].play();
+                                }
                             }
                         },
                     },
                 });
-                videoRefs.current = swiper.slides.map(slide => slide.querySelector('video'));
 
+                videoRefs.current = swiper.slides.map(slide => slide.querySelector('video'));
             }
-    }, []);
+        };
+
+        initializeSwiper();
+
+        // Event listener for click event
+        const handleMouseClick = () => {
+            setHasInteracted(true);
+        };
+        const handleTouchStart = () => {
+            setHasInteracted(true);
+        };
+
+        document.addEventListener('click', handleMouseClick);
+        document.addEventListener('touchstart', handleTouchStart);
+
+        return () => {
+            document.removeEventListener('click', handleMouseClick);
+            document.removeEventListener('touchstart', handleTouchStart);
+        };
+    }, [hasInteracted]);
 
     return (
         <div>
@@ -48,13 +71,13 @@ const Shorts = () => {
                 <div className="swiper-container" ref={swiperRef}>
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
-                            <Video video={video1} />
+                            <Video video={video1} ref={(ref) => videoRefs.current.push(ref)} />
                         </div>
                         <div className="swiper-slide">
-                            <Video video={video2} />
+                            <Video video={video2} ref={(ref) => videoRefs.current.push(ref)} />
                         </div>
                         <div className="swiper-slide">
-                            <Video video={video3} />
+                            <Video video={video3} ref={(ref) => videoRefs.current.push(ref)} />
                         </div>
                     </div>
                 </div>
